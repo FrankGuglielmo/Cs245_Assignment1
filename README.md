@@ -18,9 +18,11 @@ it would be best to implement an ArrayList of double arrays to hold all the regi
 noticed that this drastically increased the run time, as instead of being able to call a 
 function like Arrays.copyOfRange(), I had to manually reinsert the values into the subarrays 
 after already looping to find the indexes in the first place, creating an n^2 run just in finding
-the sortedRegions. To remedy this, I simply kept tracked at the beginning and ending indexes of 
-each sorted region and stored them into an ArrayList of integers. This allowed me to not only use
-less loops, but would make it poosible to use Arrays.copyOfRange(), saving me a lot of time when
+the sortedRegions. Not only that, but in order to make the code even compile, I had to change the 
+signature of the sort function, which was not allowed in the assignment description. To remedy this, 
+I simply kept tracked at the beginning and ending indexes of each sorted region and stored them into an 
+ArrayList of integers. This allowed me to not only useless loops, but would make it poosible to use 
+Arrays.copyOfRange(), saving me a lot of time when
 it came to finding the sortedRegions in the original array. As a result, this function, 
 findSortedRegions(double [] arr), returned an ArrayList of all the starting and end points of
 the original array. In terms of my sort function, by doing a lot of the work to find the 
