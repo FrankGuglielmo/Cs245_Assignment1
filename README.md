@@ -4,7 +4,7 @@ Link to Running Time vs. Sorting algorithm Chart:
 
 https://docs.google.com/spreadsheets/d/1lTCGVQwHRajd9ENvomshDcMTND17dfHQgiLYz6PSSvM/edit#gid=0
 
-#Cs245_Assignment1 - Part 2
+# Cs245_Assignment1 - Part 2
 
 Description of the "Quicker than Merge" sort:
 
