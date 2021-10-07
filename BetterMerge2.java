@@ -51,20 +51,7 @@ public class BetterMerge2 extends Main{
 
             left = Arrays.copyOfRange(arr, sortedRegions.get(0), (sortedRegions.get(1) + 1));
             right = Arrays.copyOfRange(arr, sortedRegions.get(2), (sortedRegions.get(3) + 1));
-            /*
-            if(sortedRegions.get(0) != sortedRegions.get(1)) {
-                left = Arrays.copyOfRange(arr, sortedRegions.get(0), sortedRegions.get(1));
-            }
-            else{
-                left = Arrays.copyOfRange(arr, sortedRegions.get(0), (sortedRegions.get(1) + 1));
-            }
-            if(sortedRegions.get(2) != sortedRegions.get(3)) {
-                right = Arrays.copyOfRange(arr, sortedRegions.get(2), sortedRegions.get(3));
-            }
-            else{
-                right = Arrays.copyOfRange(arr, sortedRegions.get(2), (sortedRegions.get(3) + 1));
-            }
-*/
+
             merge(arr, left, right);
 
             sortedRegions.remove(2);
