@@ -51,7 +51,7 @@ public class Main{
 
 
         long startTime = System.currentTimeMillis();
- /*       InsertionSort.sort(insertionArray);
+        InsertionSort.sort(insertionArray);
         long insertionSortEndTime = System.currentTimeMillis() - startTime;
         if(isSorted(insertionArray))
             System.out.println("Insertion Sort took " + insertionSortEndTime + " milliseconds for " + insertionArray.length + " values");
@@ -77,7 +77,7 @@ public class Main{
             System.out.println("Array was not fully bubble sorted");
             System.exit(0);
         }
-  */    startTime = System.currentTimeMillis();
+      startTime = System.currentTimeMillis();
         MergeSort.sort(mergeArray);
         long mergeSortEndTime = System.currentTimeMillis() - startTime;
         if(isSorted(mergeArray))
@@ -86,7 +86,7 @@ public class Main{
             System.out.println("Array was not fully merge sorted");
             System.exit(0);
         }
-   /*   startTime = System.currentTimeMillis();
+      startTime = System.currentTimeMillis();
         QuickSort.sort(quickArray, 0, arr.length - 1);
         long quickSortEndTime = System.currentTimeMillis() - startTime;
         if(isSorted(quickArray))
@@ -96,7 +96,7 @@ public class Main{
             System.exit(0);
         }
 
- */     startTime = System.currentTimeMillis();
+      startTime = System.currentTimeMillis();
         betterMergeArray = BetterMerge.sort(arr);
         long betterMergeSortEndTime = System.currentTimeMillis() - startTime;
         if(betterMergeIsSorted(betterMergeArray))
