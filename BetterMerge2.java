@@ -54,6 +54,7 @@ public class BetterMerge2 extends Main{
 
             merge(arr, left, right);
 
+
             sortedRegions.remove(2);
             sortedRegions.remove(1);
         }
