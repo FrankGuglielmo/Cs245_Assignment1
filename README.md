@@ -10,6 +10,8 @@ Description of the "Quicker than Merge" sort:
 
 (To see code view BetterMerge2.java file) 
 
+Graph for Requirement 4 is in same link
+
 In this algorithm, I was able to utilize the same merge function as I did in MergeSort, as the
 function for merging two arrays into one was pretty efficient and the most self-explanatory. 
 However, the main challenge came in when deciphering where in the array should I create the
