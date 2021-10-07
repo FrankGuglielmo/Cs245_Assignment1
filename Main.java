@@ -28,7 +28,7 @@ public class Main{
 
 
     public static void main(String [] args){
-        double[] arr = new double[100000];
+        double[] arr = new double[50000];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = Math.random() * 100;
         }
@@ -39,6 +39,7 @@ public class Main{
         double [] mergeArray = new double[arr.length];
         double [] quickArray = new double[arr.length];
         Double [] betterMergeArray = new Double[arr.length];
+        double [] betterMerge2Array = new double[arr.length];
 
         for (int i = 0; i < arr.length; i++) {
             insertionArray[i] = arr[i];
@@ -47,11 +48,12 @@ public class Main{
             mergeArray[i] = arr[i];
             quickArray[i] = arr[i];
             betterMergeArray[i] = arr[i];
+            betterMerge2Array[i] = arr[i];
         }
 
 
         long startTime = System.currentTimeMillis();
-        InsertionSort.sort(insertionArray);
+ /*       InsertionSort.sort(insertionArray);
         long insertionSortEndTime = System.currentTimeMillis() - startTime;
         if(isSorted(insertionArray))
             System.out.println("Insertion Sort took " + insertionSortEndTime + " milliseconds for " + insertionArray.length + " values");
@@ -105,6 +107,15 @@ public class Main{
             System.out.println("Array was not fully quick sorted");
             System.exit(0);
         }
-
+*/
+        startTime = System.currentTimeMillis();
+        BetterMerge2.sort(betterMerge2Array);
+        long mergeSortEndTime = System.currentTimeMillis() - startTime;
+        if(isSorted(betterMerge2Array))
+            System.out.println("Merge Sort took " + mergeSortEndTime + " milliseconds for " + mergeArray.length + " values");
+        else {
+            System.out.println("Array was not fully merge sorted");
+            System.exit(0);
+        }
     }
 }
