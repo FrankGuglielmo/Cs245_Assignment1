@@ -28,7 +28,7 @@ public class Main{
 
 
     public static void main(String [] args){
-        double[] arr = new double[50000];
+        double[] arr = new double[100000];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = Math.random() * 100;
         }
@@ -53,7 +53,7 @@ public class Main{
 
 
         long startTime = System.currentTimeMillis();
- /*       InsertionSort.sort(insertionArray);
+        InsertionSort.sort(insertionArray);
         long insertionSortEndTime = System.currentTimeMillis() - startTime;
         if(isSorted(insertionArray))
             System.out.println("Insertion Sort took " + insertionSortEndTime + " milliseconds for " + insertionArray.length + " values");
@@ -97,7 +97,7 @@ public class Main{
             System.out.println("Array was not fully quick sorted");
             System.exit(0);
         }
-
+/*
       startTime = System.currentTimeMillis();
         betterMergeArray = BetterMerge.sort(arr);
         long betterMergeSortEndTime = System.currentTimeMillis() - startTime;
@@ -110,12 +110,14 @@ public class Main{
 */
         startTime = System.currentTimeMillis();
         BetterMerge2.sort(betterMerge2Array);
-        long mergeSortEndTime = System.currentTimeMillis() - startTime;
+        long betterMerge2SortEndTime = System.currentTimeMillis() - startTime;
         if(isSorted(betterMerge2Array))
             System.out.println("Merge Sort took " + mergeSortEndTime + " milliseconds for " + mergeArray.length + " values");
         else {
             System.out.println("Array was not fully merge sorted");
             System.exit(0);
         }
+
+
     }
 }
