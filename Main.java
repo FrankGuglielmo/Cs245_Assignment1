@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Main{
 
+    //Swaps two values in a given array
     public static void swap(double [] arr, int i, int j){
         double temp = arr[i];
         arr[i] = arr[j];
@@ -28,11 +31,20 @@ public class Main{
 
 
     public static void main(String [] args){
-        double[] arr = new double[50000];
+
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Input array size you would like to test: ");
+        String arraySize = scan.nextLine();
+        int arraySizeInt = Integer.parseInt(arraySize);
+
+        //Initialize a double array of size arraySizeInt and fill it with random values
+        double[] arr = new double[arraySizeInt];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = Math.random() * 100;
         }
 
+        //Test the same arr[] for each type of sort
         double [] insertionArray = new double [arr.length];
         double [] selectionArray = new double [arr.length];
         double [] bubbleArray = new double[arr.length];
@@ -51,7 +63,7 @@ public class Main{
             betterMerge2Array[i] = arr[i];
         }
 
-
+        //Test Runtime for Insertion Sort
         long startTime = System.currentTimeMillis();
         InsertionSort.sort(insertionArray);
         long insertionSortEndTime = System.currentTimeMillis() - startTime;
@@ -61,6 +73,7 @@ public class Main{
             System.out.println("Array was not fully insertion sorted");
             System.exit(0);
         }
+        //Test Runtime for Selection Sort
         startTime = System.currentTimeMillis();
         SelectionSort.sort(selectionArray);
         long selectionSortEndTime = System.currentTimeMillis() - startTime;
@@ -70,6 +83,7 @@ public class Main{
             System.out.println("Array was not fully selection sorted");
             System.exit(0);
         }
+        //Test Runtime for Bubble Sort
         startTime = System.currentTimeMillis();
         BubbleSort.sort(bubbleArray);
         long bubbleSortEndTime = System.currentTimeMillis() - startTime;
@@ -79,7 +93,8 @@ public class Main{
             System.out.println("Array was not fully bubble sorted");
             System.exit(0);
         }
-      startTime = System.currentTimeMillis();
+        //Test Runtime for Merge Sort
+        startTime = System.currentTimeMillis();
         MergeSort.sort(mergeArray);
         long mergeSortEndTime = System.currentTimeMillis() - startTime;
         if(isSorted(mergeArray))
@@ -88,7 +103,8 @@ public class Main{
             System.out.println("Array was not fully merge sorted");
             System.exit(0);
         }
-      startTime = System.currentTimeMillis();
+        //Test Runtime for Quick Sort
+        startTime = System.currentTimeMillis();
         QuickSort.sort(quickArray, 0, arr.length - 1);
         long quickSortEndTime = System.currentTimeMillis() - startTime;
         if(isSorted(quickArray))
@@ -97,17 +113,8 @@ public class Main{
             System.out.println("Array was not fully quick sorted");
             System.exit(0);
         }
-/*
-      startTime = System.currentTimeMillis();
-        betterMergeArray = BetterMerge.sort(arr);
-        long betterMergeSortEndTime = System.currentTimeMillis() - startTime;
-        if(betterMergeIsSorted(betterMergeArray))
-            System.out.println("Better Merge Sort Sort took " + betterMergeSortEndTime + " milliseconds for " + betterMergeArray.length + " values");
-        else {
-            System.out.println("Array was not fully quick sorted");
-            System.exit(0);
-        }
-*/
+
+        //Test Runtime for BetterMerge Sort
         startTime = System.currentTimeMillis();
         BetterMerge2.sort(betterMerge2Array);
         long betterMerge2SortEndTime = System.currentTimeMillis() - startTime;
