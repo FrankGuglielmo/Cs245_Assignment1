@@ -3,7 +3,6 @@ import java.util.Arrays;
 
 public class BetterMerge2 extends Main{
 
-
     //Similar to MergeSort, but faster since we don't always have to assume left and right arrays
     //are only one element big. Still is possible, but shaves a lot of time off since the program
     //doesn't split every single element up like the regular MergeSort
